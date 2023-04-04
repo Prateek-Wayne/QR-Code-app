@@ -5,8 +5,7 @@ import os
 import qrcode
 import time
 import cv2
-# Loading
-# Globals
+
 
 from PIL import Image
 def load_image(img):
@@ -95,6 +94,18 @@ def main():
                 st.write("Link Inside QR")
                 st.info(value)
     elif choice==menu[3]:
-        st.subheader("About")
+        st.title("About Me")
+        st.header("QR Code App")
+        st.write("Welcome to my QR Code app! With this app, you can easily generate QR codes for any text or URL you want to share. Simply enter the text or URL, and the app will generate a QR code that you can save or share with others.")
+        st.subheader("Features")
+        st.write("- Generate QR codes for any text or URL")
+        st.write("- Save QR codes as images")
+        st.write("- Share QR codes with others")
+        st.subheader("Screenshot")
+        st.subheader("Source Code")
+        st.write("The source code for this app is available on GitHub: https://github.com/Prateek-Wayne/QR")
+        st.subheader("About the Author")
+        st.write("This app was created by Prateek Verma. If you have any feedback or suggestions, please feel free to contact me at prateek.2001.verma@gmail.com.")
+
 if __name__=='__main__':
     main()
