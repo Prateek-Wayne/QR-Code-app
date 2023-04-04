@@ -35,13 +35,13 @@ def main():
             </style>
             """
     st.markdown(hide_menu_style, unsafe_allow_html=True)
-    menu=["Home","Decode-QR","Scan QR","About"]
+    menu=["Generate QR Code","Decode QR Code","Scan QR Code","About"]
     choice =st.sidebar.selectbox("Menu",menu)
     if choice==menu[0]:
-        st.subheader("Home")
+        st.subheader("Generate QR Code")
         #
         with st.form(key='myqr_form'):
-            raw_text=st.text_input("Text Here")
+            raw_text=st.text_input("Paste Your Link Here")
             submit_button=st.form_submit_button("Generate QR")
         if submit_button:
             col1,col2=st.columns(2)
@@ -69,7 +69,7 @@ def main():
             path=os.path.join(dire,uniquename)
             os.remove(path)
     elif choice==menu[1]:
-        st.subheader("Decode-Qr")
+        st.subheader("Decode QR")
         image_file=st.file_uploader("Upload Image",type=['jpg','png','jpeg'])
         if image_file is not None:
             img=load_image(image_file)
@@ -83,7 +83,7 @@ def main():
                 st.info(value)
 
     elif choice==menu[2]:
-        st.subheader("Scan")
+        st.subheader("Scan QR")
         picture = st.camera_input("Scan Your QR")
         if picture:
             st.image(picture)
