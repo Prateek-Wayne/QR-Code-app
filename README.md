@@ -1,5 +1,5 @@
 # QR Code Generator
-### TO check the app Visit [https://qr-code-generator-3vlh.onrender.com](URL)
+### TO check the app Visit [https://qr-code-generator-3vlh.onrender.com]
 This is a simple QR code generator application built with Python. It uses the qrcode library to generate QR codes for the given input data.
 ## Installation
 To install the dependencies, run the following command:
